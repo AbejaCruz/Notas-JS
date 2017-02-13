@@ -12,11 +12,16 @@ var app = {
     storageBucket: "notas-ca195.appspot.com",
     messagingSenderId: "322197481760"
 	},
+	InitFirebase: function()
+		{
+		  	firebase.initializeApp(config);
+		},
 
 	inicio: function(){
 		this.iniciaFastClick();
 		this.iniciaBotones();
 		this.refrescarLista();
+		this.InitFirebase();
 	},
 
 	iniciaFastClick: function() {
